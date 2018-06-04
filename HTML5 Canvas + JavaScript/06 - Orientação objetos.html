@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    // Criando um objeto
+    function Carro(cor, velocMaxima){
+        // Criando os atributos
+        this.cor = cor;
+        this.velocMaxima = velocMaxima;
+        this.velocAtual = 0;
+
+        // Criando um método
+        this.acelerar = function(){
+            this.velocAtual += 10;
+        }
+        
+    }
+
+    var meuCarro = new Carro('vermelho', 250);
+    var oponente = new Carro('azul', 300);
+
+    console.log('Velocidade Atual: ' + meuCarro.velocAtual);
+    console.log(meuCarro);
+    console.log(oponente);
+
+    meuCarro.acelerar();
+
+    console.log('Velocidade Atual: ' + meuCarro.velocAtual);
+
+    // Verificando as velocidades
+    document.write('Carro ' + meuCarro.cor + ': ' + meuCarro.velocAtual);
+    document.write('<br>');
+
+    // Outra forma de acessar o atributo
+    document.write('Carro ' + oponente.cor + ': ' + oponente['velocAtual']);
+
+    // Criando objeto (sintaxe)
+    var meuObjeto = {
+        atributo1: 12,
+        atributo2: 'valor2',
+        metodo1: function(){
+
+        },
+        metodo2: function(){
+
+        }
+    }
+
+
+    // Outra forma de criar a classe carro
+    var novoCarro = {
+        cor: 'Azul', 
+        velocAtual: 0,
+        acelerar: function(){
+            this.velocAtual += 10;
+        }
+    }
+
+    document.write('<br>');
+    document.write('Novo carro:' + novoCarro.cor + ' velocidade atual: ' + novoCarro['velocAtual']);
+    document.write('<br>acelerar()');
+    novoCarro.acelerar();    
+    document.write('<br>');
+    document.write('Novo carro:' + novoCarro.cor + ' velocidade atual: ' + novoCarro['velocAtual']);
+
+</script>
