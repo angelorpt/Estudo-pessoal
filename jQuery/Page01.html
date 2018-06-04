@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script src="js/jquery-3.3.1.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+</head>
+<body>
+    <p>Teste de click</p>
+    <p id="p2">Novo parágrafo</p>
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+
+        $("#p2").hide();
+
+        $("p").click(function(){
+            $(this).hide();
+            $("#p2").show();
+        });
+    });
+</script>

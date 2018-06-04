@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="meu_canvas" width="300" height="300"></canvas>
+    <script>
+        // referenciando canvas
+        var canvas = document.getElementById('meu_canvas');
+        
+        // obtendo o contexto gráfico
+        var context = canvas.getContext('2d');
+
+        context.fillStyle = 'red';
+        context.fillRect(1, 1,100,100);
+
+        context.lineWidth = 3;
+        context.strokeStyle = 'blue';
+        context.strokeRect (2, 2, 100, 100);
+
+        // Iniciar o path
+        context.beginPath();
+
+        // Desenhar estrela
+        context.moveTo(75, 250);
+        context.lineTo(150, 50);
+        context.lineTo(225, 250);
+        context.lineTo(50, 120);
+        context.lineTo(250, 120);
+        context.lineTo(75, 250);
+
+        // Configurar a linha
+        context.lineWidth = 2;
+        context.strokeStyle = 'red';
+
+        // Traça as linhas
+        context.stroke();
+
+    </script>
+</body>
+</html>

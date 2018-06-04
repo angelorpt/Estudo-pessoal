@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Teste de texto (primeiro parágrafo)</p>
+    <p id="test">Outro texto qualquer</p>
+    <p class="item">Outro teste</p>
+    <p class="intro">Parágrafo com classe intro</p>
+    <input type="text" class="item">
+    <button id="btn1">Clique aqui</button>
+
+    <p>lista 1</p>
+    <ul>
+        <li>Azul</li>
+        <li>Preto</li>
+        <li>Vermelho</li>
+        <li>Amarelo</li>
+    </ul>
+    <button id="btn2">Botão lista</button>    
+
+    <p>lista 1</p>
+    <ul>
+        <li>Azul</li>
+        <li>Preto</li>
+        <li>Vermelho</li>
+        <li>Amarelo</li>
+    </ul>    
+    <button id="btn3">Botão lista</button>
+
+    <br>
+    <a href="http://google.com">google</a><br>
+    <a href="http://yahoo.com" target="_blank">yahoo</a><br>
+    <button id="btn4">Botão 4</button>
+
+    <br>
+    <br>
+    <input type="button" value="Ocultar todos os botões" id="btn5">
+
+    
+    <table class="table table-hover" >
+        <thead>
+            <tr>
+                <th>Cores</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Azul</td></tr>
+            <tr><td>Verde</td></tr>
+            <tr><td>Amarelo</td></tr>
+            <tr><td>Cinza</td></tr>
+            <tr><td>Preto</td></tr>
+            <tr><td>Vermelho</td></tr>
+            <tr><td>Laranja</td></tr>
+            <tr><td>Marrom</td></tr>
+        </tbody>
+    </table>
+    
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        // seletor de elemento
+        $("p").hide();
+
+        // seletor de id
+        $("#teste").hide();
+
+        // seletor de classe
+        $(".item").hide();
+
+        // todos os elementos
+        $("*").show();
+
+        $("#btn1").click(function(){
+            
+            // elemento com classe intro
+            $("p.intro").hide();
+
+            // primeiro elemento
+            alert($("p:first").html());
+
+        });
+
+        $("#btn2").click(function(){
+            // primeiro elemento li do primeiro elemento ul
+            $("ul li:first").html("Colorido");
+        });
+
+        $("#btn3").click(function(){
+            // primeiro elemento li de todos os elementos ul
+            $("ul li:first-child").hide();
+        });
+
+        $("#btn4").click(function(){
+            // elementos com atributos href
+            $("[href]").html("Atalho google");
+            $("a[target='_blank']").html("Novo link site yahoo");
+            $("a[target!='_blank']").html("Link que não possui atributo target=blank");
+        });
+
+        $("#btn5").click(function(){
+            // todos os botões e elementos input do tipo button
+            $(":button").hide();
+        }); 
+
+
+        // elementos impares
+        $("tr:even").css("background-color","yellow");
+
+        // elementos pares
+        $("tr:odd").css({
+            "background-color": "blue",
+            "color": "white"
+        });
+        
+    });
+</script>

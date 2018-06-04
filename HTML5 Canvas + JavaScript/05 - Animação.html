@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="idc" width="700" height="500"></canvas>
+</body>
+</html>
+
+<script>
+
+    var tAnterior = new Date().getTime();
+
+    // save - restore    
+    var canvas = document.getElementById('idc');
+    var context = canvas.getContext('2d');
+
+    var ovni = new Image();
+    ovni.src = 'img/ovni1.png';
+    ovni.onload = moverOvni();
+    
+    // Dados da bola
+    var x = 20  ;
+    var y = 100;
+    var raio = 5;
+
+    // Momento Inicial
+    var anterior = new Date().getTime();
+
+    // Iniciar a animação
+    window.requestAnimationFrame(mexerBola);
+
+    // Iniciar animação
+    requestAnimationFrame(moverOvni);
+
+
+    function mexerBola(){
+        // Momento atual
+        var agora = new Date().getTime();
+
+        // Diferença
+        var tempo = agora - anterior;
+
+        // Limpar o Canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Desenhar a bola
+        context.beginPath();
+        context.arc(x, y, raio, 0, Math.PI*2);
+        context.fill();
+
+        // Cancelado
+        // Deslocar 20 pixels para a direita
+        // x -=20;
+
+        // Deslocar 20 pixels/seg
+        var velocidade = 80;
+        x += ((velocidade * tempo) / 1000)
+        
+        if (x > 700){
+            x = 20;
+        }
+
+        context.drawImage(ovni, x, 100, 50, 25);
+
+
+        // Guardar o tempo anterior
+        anterior = agora;
+
+        // Chamar o próximo ciclo da animação
+        requestAnimationFrame(mexerBola);
+
+    }   
+
+    function moverOvni(){
+        var tAgora = new Date().getTime();
+        var tTempo = tAgora - tAnterior;
+        var velocidade = 100;
+        y += (velocidade * tTempo) / 1000
+
+        context.drawImage(ovni, 50, y, 120, 110);
+
+        if (y > canvas.height){
+            y = 0;
+        } 
+
+        tAnterior = tAgora; 
+        window.requestAnimationFrame(moverOvni);
+    }
+    
+</script>
