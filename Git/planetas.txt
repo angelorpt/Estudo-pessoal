@@ -2,4 +2,3 @@ Alderaan
 Endor
 Terra
 Marte
-Jupiter
