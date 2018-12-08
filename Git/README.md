@@ -1,5 +1,5 @@
 #Star Wars Repo
 
-![./ioda.png](Ioda)
+![./yoda.png](Yoda)
 
 Este repositório serve de exemplo para o curso de Git.
