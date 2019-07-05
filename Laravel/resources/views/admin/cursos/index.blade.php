@@ -8,8 +8,8 @@
         <h3 class="center">Lista de Cursos</h3>
 
         <div class="row">
-            <table class="table table-light">
-                <thead class="thead-light">
+            <table>
+                <thead>
                     <tr>
                         <th>ID</th>
                         <th>Título</th>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="row">
-            <a class="btn blue" href="{{ route('admin.cursos.adicionar') }}">Adicionar</a>
+            <a class="btn blue darken-2" href="{{ route('admin.cursos.adicionar') }}">Adicionar</a>
         </div>
 
     </div>
