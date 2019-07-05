@@ -1,6 +1,6 @@
 @extends('layout.site')
 
-@section('titulo', 'Cursos')
+@section('titulo', 'Cadastrar')
 
 @section('conteudo')
 
@@ -16,7 +16,6 @@
             </form>
             
         </div>
-
     </div>
 
 @endsection

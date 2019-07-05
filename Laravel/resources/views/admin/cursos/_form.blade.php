@@ -1,18 +1,22 @@
+{{-- titulo --}}
 <div class="input-field">
     <input type="text" name="titulo" value="{{ isset($registo->titulo) ? $registro->titulo : '' }}">
     <label for="">Título</label>
 </div>
 
+{{-- descricao --}}
 <div class="input-field">
     <input type="text" name="descricao" value="{{ isset($registo->descricao) ? $registro->titulo : '' }}">
     <label for="">Descrição</label>
 </div>
 
+{{-- Valor --}}
 <div class="input-field">
     <label for="">Valor</label>
     <input type="text" name="valor" value="{{ isset($registo->valor) ? $registro->valor : '' }}">
 </div>
 
+{{-- input file --}}
 <div class="file-field input-field">
     <div class="btn blue darken-1">
         <span>Imagem</span>
@@ -30,11 +34,11 @@
     </div>    
 @endif
 
-
+{{-- checkbox para publicação --}}
 <div class="input-field">
     <p>
         <label>
-            <input type="checkbox" id="test5" {{ isset($registro->publicado) && $registro->publicado == 'sim' ? 'checked' : '' }} value="true"/>
+            <input type="checkbox" name="publicado" id="test5" {{ isset($registro->publicado) && $registro->publicado == 'sim' ? 'checked' : '' }} value="true"/>
             <span>Publicar?</span>
         </label>
     </p>
