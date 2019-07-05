@@ -1,19 +1,19 @@
 {{-- titulo --}}
 <div class="input-field">
-    <input type="text" name="titulo" value="{{ isset($registo->titulo) ? $registro->titulo : '' }}">
+    <input type="text" name="titulo" value="{{ isset($registro->titulo) ? $registro->titulo : '' }}">
     <label for="">Título</label>
 </div>
 
 {{-- descricao --}}
 <div class="input-field">
-    <input type="text" name="descricao" value="{{ isset($registo->descricao) ? $registro->titulo : '' }}">
+    <input type="text" name="descricao" value="{{ isset($registro->descricao) ? $registro->descricao : '' }}">
     <label for="">Descrição</label>
 </div>
 
 {{-- Valor --}}
 <div class="input-field">
     <label for="">Valor</label>
-    <input type="text" name="valor" value="{{ isset($registo->valor) ? $registro->valor : '' }}">
+    <input type="text" name="valor" value="{{ isset($registro->valor) ? $registro->valor : '' }}">
 </div>
 
 {{-- input file --}}
@@ -30,7 +30,7 @@
 {{-- se a imagem existir --}}
 @if (isset($registro->imagem))
     <div class="input-field">
-        <img src="{{ asset($registro->imagem) }}">
+        <img width="180" src="{{ asset($registro->imagem) }}">
     </div>    
 @endif
 
