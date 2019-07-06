@@ -17,6 +17,117 @@
 
 <body>
 
+    <h4>NavBar</h4>
+
+    <div class="navbar-fixed">
+        <nav class="deep-purple">
+            <div class="nav-wrapper deep-purple container">
+                <a href="#" class="brand-logo left">Logo</a>
+
+                <a href="#" data-target="menu-mobile" class="sidenav-trigger right hide-on-large-only">
+                    <i class="material-icons">menu</i>
+                </a>
+
+                <ul id="menu-desktop" class="right hide-on-med-and-down">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#" class="btn blue darken-3">Produtos</a></li>
+                    <li>
+                        <a href="#!" data-target="dropdown-cursos" class="dropdown-trigger">
+                            Cursos<i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                    <li><a href="#">Sair</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+
+    <!-- menu mobile -->
+    <ul id="menu-mobile" class="sidenav">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">Produtos</a></li>
+        <li>
+            <a href="#!" data-target="dropdown-cursos-mobile" class="dropdown-trigger">
+                Cursos<i class="material-icons right">save</i>
+            </a>
+        </li>
+        <li><a href="#">Sair</a></li>
+    </ul>
+
+    <!-- opcoes dropdown -->
+    <ul id="dropdown-cursos" class="dropdown-content">
+        <li><a href="#" class="purple-text">JavaScript</a></li>
+        <li><a href="#" class="purple-text">Laravel</a></li>
+        <li><a href="#" class="purple-text">Materialize</a></li>
+        <li><a href="#" class="purple-text">Quasar</a></li>
+    </ul>
+
+    <!-- opcoes dropdown mobile-->
+    <ul id="dropdown-cursos-mobile" class="dropdown-content">
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">Laravel</a></li>
+        <li><a href="#">Materialize</a></li>
+        <li><a href="#">Quasar</a></li>
+    </ul>
+
+
+    <hr>
+
+    <h4>Preloader - Progress Bar</h4>
+
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preloader-wrapper active">
+        <div class="spinner-layer spinner-red-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preloader-wrapper small active">
+        <div class="spinner-layer spinner-green-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress">
+        <div class="indeterminate"></div>
+    </div>
+
+    <div class="progress blue-grey">
+        <div class="determinate red" style="width: 70%"></div>
+    </div>
+
+    <hr>
+
     <h4>Collections</h4>
     <div class="collection">
         <a href="" class="collection-item blue-text">Item 1</a>
@@ -26,9 +137,9 @@
 
     <ul class="collection">
         <li class="collection-header">Frutas</li>
-        <li class="collection-item">Maça</li>
-        <li class="collection-item">Pera</li>
-        <li class="collection-item">Uva</li>
+        <li class="collection-item">Maça<span class="badge">10</span></li>
+        <li class="collection-item">Pera<span class="badge new">2</span></li>
+        <li class="collection-item">Uvas <span class="badge new red lighten-1" data-badge-caption="frutas">3</span></li>
     </ul>
 
     <ul class="collection with-header">
@@ -96,7 +207,7 @@
 
     <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
 
-    <div class="fixed-action-btn horizontal" style="top: 50px; right:45px;">
+    <div class="fixed-action-btn horizontal" style="top: 150px; right:45px;">
         <a class="btn-floating btn-large red" href="#"><i class="material-icons">menu</i></a>
         <ul>
             <li><a href="#" class="btn-floating"><i class="material-icons">save</i></a></li>
@@ -403,6 +514,7 @@
 
     <script src="js/jQuery 3.3.1/jquery-3.3.1.min.js"></script>
     <script src="js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
